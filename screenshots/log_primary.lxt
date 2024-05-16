@@ -1,0 +1,51 @@
+ubuntu@ip-10-1-10-166:~$ mysql --host=udacity.cmboyuzclpzy.us-east-1.rds.amazonaws.com --user=admin --password=Manhcuong1992 udacity
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 73
+Server version: 8.0.35 Source distribution
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use udacity;
+Database changed
+mysql> CREATE TABLE Persons (
+    ->     PersonID int,
+    ->     LastName varchar(255),
+    ->     FirstName varchar(255),
+    ->     Address varchar(255),
+    ->     City varchar(255)
+    ->     City varchar(255)^C
+mysql> ^C
+mysql> ^C
+mysql> CREATE TABLE Personal (
+    ->     Id int,
+    ->     Fullname varchar(255),
+    ->   );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4
+mysql> CREATE TABLE Personal (
+    ->     Id int,
+    ->     Fullname varchar(255)
+    ->   );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> insert Personal values(1,'jonas');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Personal;
++------+----------+
+| Id   | Fullname |
++------+----------+
+|    1 | jonas    |
++------+----------+
+1 row in set (0.00 sec)
+
+mysql> exits;
